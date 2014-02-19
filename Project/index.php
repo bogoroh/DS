@@ -16,59 +16,59 @@
 		$weatherCon = $parsed_json->{'weather'}[0]->{'main'};
 		$city = $parsed_json->{'name'};
 		$country = $parsed_json->{'sys'}->{'country'};
-    $deg = $parsed_json->{'wind'}->{'deg'};
-$windspeed = $parsed_json->{'wind'}->{'speed'};
-switch ($deg) {
-    case ($deg > 348.75  || $deg < 11.25 ):
-        $dir = "N";
-        break;
-    case ($deg < 33.75):
-        $dir = "NNE";
-        break;
-    case ($deg < 56.25):
-        $dir = "NE";
-        break;
-    case ($deg < 78.75):
-        $dir = "ENE";
-        break;
-    case ($deg < 101.25):
-        $dir = "E";
-        break;
-    case ($deg < 123.75):
-        $dir = "ESE";
-        break;
-    case ($deg < 146.25):
-        $dir = "SE";
-        break;
-  case ($deg < 168.75):
-    $dir = "SSE";
-    break;
-  case ($deg < 191.25):
-    $dir = "S";
-    break;   
-  case ($deg < 213.75):
-    $dir = "SSW";
-    break;   
-  case ($deg < 236.25):
-    $dir = "SW";
-    break;   
-  case ($deg < 258.75):
-    $dir = "WSW";
-    break;   
-  case ($deg < 281.25):
-    $dir = "W";
-    break;      
-  case ($deg < 303.75):
-    $dir = "WNW";
-    break;      
-  case ($deg < 326.25):
-    $dir = "NW";
-    break;      
-  case ($deg < 348.75):
-    $dir = "NNW";
-    break;      
+		$deg = $parsed_json->{'wind'}->{'deg'};
+		$windspeed = $parsed_json->{'wind'}->{'speed'};
 
-}
+		switch ($deg) {
+			case ($deg > 348.75  || $deg < 11.25 ):
+				$dir = "N";
+				break;
+			case ($deg < 33.75):
+				$dir = "NNE";
+				break;
+			case ($deg < 56.25):
+				$dir = "NE";
+				break;
+			case ($deg < 78.75):
+				$dir = "ENE";
+				break;
+			case ($deg < 101.25):
+				$dir = "E";
+				break;
+			case ($deg < 123.75):
+				$dir = "ESE";
+				break;
+			case ($deg < 146.25):
+				$dir = "SE";
+				break;
+			case ($deg < 168.75):
+				$dir = "SSE";
+				break;
+			case ($deg < 191.25):
+				$dir = "S";
+				break;
+			case ($deg < 213.75):
+				$dir = "SSW";
+				break;
+			case ($deg < 236.25):
+				$dir = "SW";
+				break;
+			case ($deg < 258.75):
+				$dir = "WSW";
+				break;
+			case ($deg < 281.25):
+				$dir = "W";
+				break;
+			case ($deg < 303.75):
+				$dir = "WNW";
+				break;
+			case ($deg < 326.25):
+				$dir = "NW";
+				break;
+			case ($deg < 348.75):
+				$dir = "NNW";
+				break;
+		}
 
 		echo "Current temp $temp. Current Temp Min $tempMin. Current temp Max $tempMax.";
 		echo "</br>";
@@ -83,10 +83,10 @@ switch ($deg) {
 		echo "The city: $city";
 		echo "</br>";
 		echo "The country: $country";
-    echo "</br>";
-    echo "The windspeed: $windspeed mps.";
-    echo "</br>";
-    echo "The direction: $dir";
+		echo "</br>";
+		echo "The windspeed: $windspeed mps.";
+		echo "</br>";
+		echo "The direction: $dir";
 	}
 ?>
 
