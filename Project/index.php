@@ -1,3 +1,12 @@
+<!-- 
+Mike Taatgen & Jairo Jurdao
+Team Challenge
+Weather API
+
+ -->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
