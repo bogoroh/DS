@@ -33,7 +33,7 @@ echo "The city: $city";
 echo "</br>";
 echo "The country: $country";
 
-#echo "Current temperature in ${name} is: ${temp_f}\n";
+echo "Current temperature in ${name} is: ${temp_f}\n";
 
 }
 
