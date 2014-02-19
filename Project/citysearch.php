@@ -1,3 +1,11 @@
+<!-- 
+Mike Taatgen & Jairo Jurdao
+Team Challenge
+Weather API
+
+ -->
+
+
 <?php
 	if(isset($_POST['submit'])) {
 		$json_string = file_get_contents('http://api.openweathermap.org/data/2.5/weather?q='.$_POST['city']);
