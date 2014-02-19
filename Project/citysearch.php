@@ -18,8 +18,7 @@
 		$country = $parsed_json->{'sys'}->{'country'};
 		$deg = $parsed_json->{'wind'}->{'deg'};
 		$windspeed = $parsed_json->{'wind'}->{'speed'};
-		$weatherId = $parsed_json->{'weather'}[0];
-
+		$weatherId = $parsed_json->{'weather'}[0]->{'id'};
 		switch ($deg) {
 			case ($deg > 348.75  || $deg < 11.25 ):
 				$dir = 'N';
@@ -81,7 +80,7 @@
 			case ($weatherId == 500 || $weatherId == 501 || $weatherId == 502 || $weatherId == 503 || $weatherId == 504 || $weatherId == 520 || $weatherId == 521 || $weatherId == 522 || $weatherId == 531):
 				$path = "img/02.png";
 				break;
-			case ($weatherId = 511):
+			case ($weatherId == 511):
 				$path = "img/05.png";
 				break;
 			case ($weatherId == 601 || $weatherId == 602 || $weatherId == 611 || $weatherId == 612 || $weatherId == 616 || $weatherId == 620 || $weatherId == 621 || $weatherId == 622):
