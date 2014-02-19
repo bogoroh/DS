@@ -35,7 +35,7 @@
 		</header>
 
 		<form class="form-signin" role="form" action="citysearch.php" method="POST">
-			<input type="text" class="form-control" placeholder="Enter city" name="city" required autofocus>
+			<input type="text" class="form-control" autocomplete="off" placeholder="Enter city" name="city" required autofocus>
 
 			<button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Get Weather</button>
 		</form>
