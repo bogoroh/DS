@@ -18,6 +18,7 @@
 		$country = $parsed_json->{'sys'}->{'country'};
 		$deg = $parsed_json->{'wind'}->{'deg'};
 		$windspeed = $parsed_json->{'wind'}->{'speed'};
+		$weatherId = $parsed_json->{'main'}->{'weather'}[0];
 
 		switch ($deg) {
 			case ($deg > 348.75  || $deg < 11.25 ):
@@ -67,6 +68,60 @@
 				break;
 			case ($deg < 348.75):
 				$dir = 'NNW';
+				break;
+		}
+
+		switch ($weatherId) {
+			case ($weatherId = 200 || $weatherId = 201 || $weatherId = 202 || $weatherId = 210 || $weatherId = 211 || $weatherId = 212 || $weatherId = 221 || $weatherId = 230 || $weatherId = 231 || $weatherId = 232):
+				$path = "/img/00.png";
+				break;
+			case ($weatherId = 300 || $weatherId = 301 || $weatherId = 302 || $weatherId = 310 || $weatherId = 311 || $weatherId = 312 || $weatherId = 313 || $weatherId = 314 || $weatherId = 321):
+				$path = "/img/12.png";
+				break;
+			case ($weatherId = 500 || $weatherId = 501 || $weatherId = 502 || $weatherId = 503 || $weatherId = 504 || $weatherId = 520 || $weatherId = 521 || $weatherId = 522 || $weatherId = 531):
+				$path = "/img/02.png";
+				break;
+			case ($weatherId = 511):
+				$path = "/img/05.png";
+				break;
+			case ($weatherId = 601 || $weatherId = 602 || $weatherId = 611 || $weatherId = 612 || $weatherId = 616 || $weatherId = 620 || $weatherId = 621 || $weatherId = 622):
+				$path = "/img/16.png";
+				break;
+			case ($weatherId = 600 ):
+				$path = "/img/05.png";
+				break;
+			case ($weatherId = 615 ):
+				$path = "/img/06.png";
+				break;
+			case ($weatherId = 701):
+				$path = "/img/18.png";
+				break;
+			case ($weatherId = 711):
+				$path = "/img/20.png";
+				break;
+			case ($weatherId = 731):
+				$path = "/img/24.png";
+				break;
+			case ($weatherId = 721 || $weatherId = 741 || $weatherId = 751 || $weatherId = 761 || $weatherId = 762 || $weatherId = 771 || $weatherId = 781):
+				$path = "/img/26.png";
+				break;
+			case ($weatherId = 800):
+				$path = "/img/32.png";
+				break;
+			case ($weatherId = 801):
+				$path = "/img/32.png";
+				break;
+			case ($weatherId = 802):
+				$path = "/img/10.png";
+				break;
+			case ($weatherId = 803):
+				$path = "/img/10.png";
+				break;
+			case ($weatherId = 804):
+				$path = "/img/10.png";
+				break;
+			case ($weatherId = 900 || $weatherId = 901 || $weatherId = 902 || $weatherId = 903 || $weatherId = 904 || $weatherId = 905 || $weatherId = 906 || $weatherId = 950 || $weatherId = 951 || $weatherId = 952 || $weatherId = 953 || $weatherId = 954 || $weatherId = 955 || $weatherId = 956 || $weatherId = 957 || $weatherId = 958 || $weatherId = 959 || $weatherId = 960 || $weatherId = 961 || $weatherId = 962):
+				$path = "/img/na.png";
 				break;
 		}
 
